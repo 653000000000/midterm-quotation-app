@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// Replace 'username' and 'repository' with your GitHub username and repository name
 export default defineConfig({
   plugins: [react()],
-})
+  base: '/midterm-quotation-app/', // Your repository name with slashes
+});
