@@ -1,9 +1,10 @@
 import { Table, Button } from "react-bootstrap";
 
-function QuotationTable({ data, clearDataItems, deleteByIndex }) {
-  const totalDiscount = data.reduce((total, item) => total + item.discount, 0);
-  const totalAmount = data.reduce((total, item) => total + ((item.ppu * item.qty) - item.discount), 0);
-
+const QuotationTable = ({ products, quotations, setQuotations }) => {
+  const addQuotation = (product) => {
+    setQuotations([...quotations, product]);
+  };
+  
   return (
     <Table striped bordered hover>
       <thead>
