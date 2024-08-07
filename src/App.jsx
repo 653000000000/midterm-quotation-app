@@ -2,6 +2,13 @@ import { useState, useRef, useEffect } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import QuotationTable from "./QuotationTable";
 
+const products = [
+  { code: "p001", name: "Product A", price: 100 },
+  { code: "p002", name: "Product B", price: 200 },
+  { code: "p003", name: "Product C", price: 150 },
+  { code: "p004", name: "Product D", price: 250 },
+];
+
 function App() {
   const itemRef = useRef();
   const ppuRef = useRef();
